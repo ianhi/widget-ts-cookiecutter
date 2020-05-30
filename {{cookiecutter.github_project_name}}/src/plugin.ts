@@ -26,7 +26,7 @@ const EXTENSION_ID = '{{ cookiecutter.npm_package_name }}:plugin';
  */
 const examplePlugin: IPlugin<Application<Widget>, void> = {
   id: EXTENSION_ID,
-  requires: [IJupyterWidgetRegistry],
+  requires: [IJupyterWidgetRegistry as any],
   activate: activateWidgetExtension,
   autoStart: true
 };
